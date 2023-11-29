@@ -41,18 +41,18 @@ public class Player : MonoBehaviour
         if (_movement < 0)
         {
             transform.rotation = Quaternion.Euler(0,180,0);
-            _animator.Setbool = ("IsRunnig, true");
+            _animator.Setbool ("IsRunnig", true);
         }
 
         else if (_movement > 0)
         {
             transform.rotation = Quaternion.Euler(0,0,0);
-            _animator.Setbool = ("IsRunnig, true");
+            _animator.Setbool ("IsRunnig", true);
         }
 
         else;
         {
-            _animator.Setbool = ("IsRunnig, false");
+            _animator.Setbool ("IsRunnig", false);
         }
     }
 
