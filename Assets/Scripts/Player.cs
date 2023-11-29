@@ -5,8 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float _movement;
-    public float _jumpforce;
-    public float _velocity; 
+    public float _jumpforce = 5;
+    public float _velocity = 5; 
     Rigidbody2D _rbody;
     Animator _animator;
 
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
             Jump(); 
         }
 
-        _animator.SetBool("Isjumping", !GroundSensor._isGrounded);
+        _animator.SetBool("IsJumping", !GroundSensor._isGrounded);
     }
 
     void FixedUpdate()
@@ -41,18 +41,18 @@ public class Player : MonoBehaviour
         if (_movement < 0)
         {
             transform.rotation = Quaternion.Euler(0,180,0);
-            _animator.SetBool ("IsRunnig", true);
+            _animator.SetBool("IsRunnig", true);
         }
 
         else if (_movement > 0)
         {
             transform.rotation = Quaternion.Euler(0,0,0);
-            _animator.SetBool ("IsRunnig", true);
+            _animator.SetBool("IsRunnig", true);
         }
 
         else;
         {
-            _animator.SetBool ("IsRunnig", false);
+            _animator.SetBool("IsRunnig", false);
         }
     }
 
