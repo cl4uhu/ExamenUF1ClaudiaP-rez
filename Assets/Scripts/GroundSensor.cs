@@ -10,7 +10,7 @@ public class GroundSensor : MonoBehaviour
     {
         if(other.gameObject.layer == 3)
         {
-            _isGrounded = true; 
+            _isGrounded = true;
         }   
     }
 
